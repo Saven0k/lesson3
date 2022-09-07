@@ -6,13 +6,40 @@ Console.WriteLine("Введите число: ");
 int number = int.Parse(Console.ReadLine());
 int a = 1;
 Console.Write($"{a} -> ");
-if (number <= 0) Console.WriteLine("Не точное число");
-else
+bool b = true;
+while(b == true)
 {
+    if (number > 0)
+    {
+    b = false;
     while(a<number)
     {
     Console.Write($"{Math.Pow((a) , 2)} , ");
     a++;
     }
-Console.Write($"{Math.Pow((number) , 2)  }. ");
+    Console.Write($"{Math.Pow((number) , 2)  }. ");
+    b = false;
+    }
+    else 
+    { 
+    Console.WriteLine($"{number} это число не точно");
+    b = true;
+    Console.WriteLine("Введите число: ");
+    int number1 = int.Parse(Console.ReadLine());
+    if (number1 > 0)
+    {
+    b = false;
+    while(a<number1)
+    {
+    Console.Write($"{Math.Pow((a) , 2)} , ");
+    a++;
+    }
+    Console.Write($"{Math.Pow((number1) , 2)  }. ");
+    b = false;
+    }
+    else 
+    { 
+    Console.WriteLine($"{number1} это число не точно");
+    }    
+}
 }
