@@ -18,4 +18,4 @@ Console.WriteLine("Введите координату b-x: ");
 int Bx = int.Parse(Console.ReadLine());
 Console.WriteLine("Введите координату b-y: ");
 int By = int.Parse(Console.ReadLine());
-Console.WriteLine(Math.Round(Math.Sqrt((Math.Pow((Ax-Bx) , 2)) + (Math.Pow((Ay-By), 2))) , ));
+Console.WriteLine(Math.Round(Math.Sqrt((Math.Pow((Ax-Bx) , 2)) + (Math.Pow((Ay-By), 2))) , 3 ));
