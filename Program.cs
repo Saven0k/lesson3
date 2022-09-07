@@ -6,9 +6,13 @@ Console.WriteLine("Введите число: ");
 int number = int.Parse(Console.ReadLine());
 int a = 1;
 Console.Write($"{a} -> ");
-while(a<number)
+if (number <= 0) Console.WriteLine("Не точное число");
+else
 {
+    while(a<number)
+    {
     Console.Write($"{Math.Pow((a) , 2)} , ");
     a++;
-}
+    }
 Console.Write($"{Math.Pow((number) , 2)  }. ");
+}
