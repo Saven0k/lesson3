@@ -19,9 +19,23 @@ while(a == true)
         Console.WriteLine($"{number} - > нет");
         if (number!.Length == 5)
         {
-        Console.WriteLine($"Введи правильное число");
+            Console.WriteLine($"Введи правильное число");
         }
-        else{}
-    }
+        string number1 = Console.ReadLine();
+        if (number1[0]==number1[4] || number1[1]==number1[3])
+        {
+            Console.WriteLine($"{number1} -> да.");
+            a = false;
+        }
+        else 
+        {
+            Console.WriteLine($"{number1} - > нет");
+            if (number1!.Length == 5)
+            {
+                Console.WriteLine($"Введи правильное число");
+            }
+            else{}
+        }
+}
 }
 
