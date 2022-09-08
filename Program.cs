@@ -1,20 +1,47 @@
-﻿// Задача 21
-// Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
-// A (3,6,8); B (2,1,-7), -> 15.84
-// A (7,-5, 0); B (1,-1,9) -> 11.53
-
+﻿// Задача 23
+// Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+// 3 -> 1, 8, 27
+// 5 -> 1, 8, 27, 64, 125
 Console.Clear();
-Console.WriteLine("Введите координату A-x: ");
-int Ax = int.Parse(Console.ReadLine());
-Console.WriteLine("Введите координату A-y: ");
-int Ay = int.Parse(Console.ReadLine());
-Console.WriteLine("Введите координату A-z: ");
-int Az = int.Parse(Console.ReadLine());
-Console.WriteLine("Введите координату B-x: ");
-int Bx = int.Parse(Console.ReadLine());
-Console.WriteLine("Введите координату B-y: ");
-int By = int.Parse(Console.ReadLine());
-Console.WriteLine("Введите координату B-z: ");
-int Bz = int.Parse(Console.ReadLine());
-double result = Math.Pow((Ax-Bx), 2) + Math.Pow((Ay-By), 2) + Math.Pow((Az-Bz), 2);
-Console.WriteLine(Math.Round(Math.Sqrt(result) , 2));
+Console.Write("Введите число: ");
+int number = int.Parse(Console.ReadLine());
+int a = 1;
+Console.Write($"{number} -> ");
+bool b = true;
+while(b == true)
+{
+    if (number > 0)
+    {
+    b = false;
+    while(a<number)
+    {
+    Console.Write($"{Math.Pow((a) , 3)} , ");
+    a++;
+    }
+    Console.Write($"{Math.Pow((number) , 3)  }. ");
+    b = false;
+    }
+    else 
+    { 
+    Console.WriteLine($"{number} это число не точно");
+    b = true;
+    Console.Write("Введите число: ");
+    int number1 = int.Parse(Console.ReadLine());
+    Console.Write($"{number1} -> ");
+    if (number1 > 0)
+    {
+    b = false;
+    while(a<number1)
+    {
+    Console.Write($"{Math.Pow((a) , 3)} , ");
+    a++;
+    }
+    Console.Write($"{Math.Pow((number1) , 3)  }. ");
+    b = false;
+    }
+    else 
+    { 
+    Console.WriteLine($"{number1} это число не точно");
+    }    
+}
+}
