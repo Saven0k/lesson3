@@ -1,20 +1,27 @@
-﻿// Задача 21
-// Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
-// A (3,6,8); B (2,1,-7), -> 15.84
-// A (7,-5, 0); B (1,-1,9) -> 11.53
-
+﻿// Задача 19
+// Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+// 14212 -> нет
+// 12821 -> да
+// 23432 -> да
 Console.Clear();
-Console.WriteLine("Введите координату A-x: ");
-int Ax = int.Parse(Console.ReadLine());
-Console.WriteLine("Введите координату A-y: ");
-int Ay = int.Parse(Console.ReadLine());
-Console.WriteLine("Введите координату A-z: ");
-int Az = int.Parse(Console.ReadLine());
-Console.WriteLine("Введите координату B-x: ");
-int Bx = int.Parse(Console.ReadLine());
-Console.WriteLine("Введите координату B-y: ");
-int By = int.Parse(Console.ReadLine());
-Console.WriteLine("Введите координату B-z: ");
-int Bz = int.Parse(Console.ReadLine());
-double result = Math.Pow((Ax-Bx), 2) + Math.Pow((Ay-By), 2) + Math.Pow((Az-Bz), 2);
-Console.WriteLine(Math.Round(Math.Sqrt(result) , 2));
+Console.Write("Введите число: ");
+string number = Console.ReadLine();
+bool a = true;
+while(a == true)
+{
+    if (number[0]==number[4] || number[1]==number[3])
+    {
+        Console.WriteLine($"{number} -> да.");
+        a = false;
+    }
+    else 
+    {
+        Console.WriteLine($"{number} - > нет");
+        if (number!.Length == 5)
+        {
+        Console.WriteLine($"Введи правильное число");
+        }
+        else{}
+    }
+}
+
